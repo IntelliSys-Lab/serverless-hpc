@@ -36,6 +36,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.post('/aws-execute-single', function(req,res){
       console.log(req.body)
+      console.log("running single lambda function")
       const concurrency = ((req.body).numberoffunctions)
       shell.exec('./run-single.sh')
       shell.exec('./get-lambda-info.sh')

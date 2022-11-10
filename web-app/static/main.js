@@ -63,9 +63,10 @@ console.log(singleLambda);
 }
 
 let nonscalableresultLink = document.createElement("a");
-nonscalableresultLink.innerHTML = 'Function Results' 
-nonscalableresultLink.href = "https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/tensorflow-inspector-image-classification?tab=monitoring";
+nonscalableresultLink.innerHTML = 'Function Invoked' 
+nonscalableresultLink.style.color = 'blue' 
+
 
 let scalableresultLink = document.createElement("a");
-scalableresultLink.innerHTML = 'Function Results' 
-scalableresultLink.href = "https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/tensorflow-inspector-image-classification?tab=monitoring";
+scalableresultLink.innerHTML = 'Function Invoked' 
+scalableresultLink.style.color = 'blue' 

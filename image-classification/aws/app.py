@@ -4,6 +4,8 @@ import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
 from Inspector import * 
+import logging
+logging.getLogger().setLevel(logging.INFO)
 
 inspector = Inspector()
 inspector.inspectContainer()
