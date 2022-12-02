@@ -11,5 +11,5 @@ TAIL='}'
 
 echo $BASE$RANGE$TAIL
 
-aws lambda invoke --function-name machine-learning-complete --cli-binary-format raw-in-base64-out --payload $BASE$RANGE$TAIL --log-type Tail - | grep "LogResult"| awk -F'"' '{print $4}' | base64 --decode 
+awsv2 lambda invoke --function-name machine-learning-complete --cli-binary-format raw-in-base64-out --payload $BASE$RANGE$TAIL --log-type Tail - | grep "LogResult"| awk -F'"' '{print $4}' | base64 --decode 
 
