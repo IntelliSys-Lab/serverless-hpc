@@ -1,5 +1,5 @@
 # !/bin/bash
-export AWS_PROFILE=lab
+export AWS_PROFILE=kennelworth
 export AWS_REGION=us-east-1
 
 
