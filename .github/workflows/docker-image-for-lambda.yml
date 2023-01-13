@@ -1,0 +1,18 @@
+name: Docker Images for deploy neural network as AWS lambda function
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Prepare docker build for Neural Network
+      run: cd image-classification/aws && docker build . --file Dockerfile --tag lambda-tensorflow-python3.8:$(date +%s)
